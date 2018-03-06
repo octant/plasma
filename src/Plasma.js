@@ -26,9 +26,9 @@ class Plasma extends Component {
   render () {
     return (
       <Grid>
-        {this.props.rows.map((row, rowIndex) => {
+        {Object.keys(this.props.rows).map((rowIndex) => {
           return <Row key={rowIndex} style={this.editingRowStyle(rowIndex, 'red')}>
-            {row.map((col, colIndex) => {
+            {Object.keys(this.props.rows[rowIndex].cols).map((colIndex) => {
               const colId = `${rowIndex}.${colIndex}`
               return <Col
                 onClick={this.handleClick(rowIndex, colIndex)}
@@ -36,7 +36,7 @@ class Plasma extends Component {
                 key={colIndex}
                 xs
                 style={this.editingColStyle(rowIndex, colIndex, 'blue')}>
-                <span style={{color: '#ccc'}}>Row: {rowIndex} Col: {colIndex}</span>
+                {this.props.children}
               </Col>
             })}
           </Row>

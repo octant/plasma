@@ -1,0 +1,5 @@
+const structure = {
+  rows: {
+    cols: {}
+  }
+}

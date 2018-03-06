@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 
-import PlasmaForm from './PlasmaForm'
-
-class App extends Component {
+class Editor extends Component {
   render () {
     return (
       <div>
-        <PlasmaForm />
+        
       </div>
     )
   }
 }
 
-export default App
+export default Editor
